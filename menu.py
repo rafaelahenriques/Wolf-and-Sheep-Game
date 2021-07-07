@@ -3,7 +3,6 @@ from pygame.locals import *
 import os
 import time
 import random
-import main
 
 # Initialize sounds
 pygame.mixer.init()
@@ -88,6 +87,7 @@ def main_menu():
                         print("Start")
                         pygame.mixer.music.load('button.mp3')
                         pygame.mixer.music.play(0)
+                        import main
                         main.main()
 
                     if selected=="quit":
@@ -103,6 +103,8 @@ def main_menu():
         display_surface.blit(background, (0, 0))
 
         title=text_format("WOLF and SHEEP", font, 75, black)
+
+        # start and quit text
         if selected=="start":
             text_start=text_format("START", font2, 40, black)
 

@@ -1,5 +1,6 @@
 import pygame
 
+
 WIDTH, HEIGHT = 500, 500
 ROWS, COLS = 8, 8
 SQUARE_SIZE = WIDTH//COLS
