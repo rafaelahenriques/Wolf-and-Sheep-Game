@@ -3,6 +3,7 @@ from pygame.locals import *
 import os
 import time
 import random
+import main
 
 # Initialize sounds
 pygame.mixer.init()
@@ -52,7 +53,6 @@ font2 = "font_ys.ttf"
 clock = pygame.time.Clock()
 FPS=30
 
-
 # create the display surface object 
 # of specific dimension..e(X, Y). 
 display_surface = pygame.display.set_mode((WIDTH, HEIGHT )) 
@@ -88,17 +88,7 @@ def main_menu():
                         print("Start")
                         pygame.mixer.music.load('button.mp3')
                         pygame.mixer.music.play(0)
-
-# Start game here
-#quero colocar board dentro 
-#I tried : 
-# screen.fill(black)
-        #background = pygame.image.load("field.png")
-        #background = pygame.transform.scale(background, (1020, 525))
-        #display_surface.blit(background, (0, 0))
-
-                        print("hello")
-
+                        main.main()
 
                     if selected=="quit":
                         pygame.mixer.music.load('button.mp3')
@@ -139,7 +129,7 @@ def main_menu():
         screen.blit(text_quit, (WIDTH/2 - (quit_rect[2]/2), 360))
         pygame.display.update()
         clock.tick(FPS)
-        pygame.display.set_caption("Pygame - Rafaela & Sonia ")
+        pygame.display.set_caption("Pygame - Tripple Zero")
 
 #Initialize the Game
 main_menu()
