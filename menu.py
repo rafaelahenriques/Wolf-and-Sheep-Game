@@ -1,14 +1,15 @@
 import pygame
 from pygame.locals import *
 import os
+from pygame import mixer
 import time
 import random
 
-# Initialize sounds
-pygame.mixer.init()
-
 # Game Initialization
 pygame.init()
+
+# Initialize sounds
+pygame.mixer.init()
 
 # Sounds
 pygame.mixer.music.load("menu_song.mp3") 
@@ -19,12 +20,15 @@ pygame.mixer.music.load("menu_song.mp3")
 # Play game song
 pygame.mixer.Channel(0).play(pygame.mixer.Sound('menu_song.mp3')) 
 
+#Loop game song
+mixer.music.play(loops=-1)
+
 # Center the Game Application
 os.environ['SDL_VIDEO_CENTERED'] = '1'
  
 # Game Resolution
 WIDTH = 1020
-HEIGHT = 525
+HEIGHT = 600
 screen=pygame.display.set_mode((WIDTH, HEIGHT))
  
 # Text Renderer
@@ -99,7 +103,7 @@ def main_menu():
         # Main Menu UI
         screen.fill(black)
         background = pygame.image.load("field.png")
-        background = pygame.transform.scale(background, (1020, 525))
+        background = pygame.transform.scale(background, (1020, 600))
         display_surface.blit(background, (0, 0))
 
         title=text_format("WOLF and SHEEP", font, 75, black)

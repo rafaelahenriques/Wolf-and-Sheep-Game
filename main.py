@@ -16,7 +16,7 @@ GREEN_L = (74, 156, 84)
 
 FPS = 60
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Pygame - Rafaela & Sonia ")
+pygame.display.set_caption("Pygame - tripplezero ")
 
 
 def main():
