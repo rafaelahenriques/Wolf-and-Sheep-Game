@@ -21,9 +21,9 @@ class Board:
         self.sheep = 1
         self.wolf = 4
     
-    def draw_squares(self, win,center):
+    def draw_squares(self, win):
         win.fill(GREEN)
-        background = pygame.image.load("field.png")
+        background = pygame.image.load("images/field.png")
         background = pygame.transform.scale(background, (1020, 600))
         display_surface.blit(background, (0, 0))
 
