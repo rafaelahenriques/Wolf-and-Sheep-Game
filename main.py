@@ -1,5 +1,5 @@
 import pygame
-from board import Board
+from wolf_sheep.board import Board
 
 WIDTH, HEIGHT = 1020, 600
 ROWS, COLS = 8, 8
