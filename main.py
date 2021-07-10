@@ -16,13 +16,11 @@ GREEN_L = (74, 156, 84)
 
 FPS = 60
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Pygame - tripplezero ")
-
+pygame.display.set_caption("Pygame - Triple Zero ")
 
 def main():
     run = True
     clock = pygame.time.Clock()
-
     board = Board()
 
     while run:
@@ -37,7 +35,7 @@ def main():
 
         board.draw_squares(WIN)
         pygame.display.update()
-    pygame.quit
+    pygame.quit()
 
 
 main()
