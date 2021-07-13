@@ -13,9 +13,6 @@ pygame.mixer.init()
 
 # Sounds
 pygame.mixer.music.load("sounds/menu_song.mp3")
-# wolf_sound = pygame.mixer.Sound(os.path.join('wolf.mp3'))
-# sheep_sound = pygame.mixer.Sound(os.path.join('sheep.mp3'))
-# button_sound= pygame.mixer.Sound(os.path.join('button.mp3'))
 
 # Play game song
 pygame.mixer.Channel(0).play(pygame.mixer.Sound('sounds/menu_song.mp3'))
