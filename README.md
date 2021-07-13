@@ -9,7 +9,7 @@
 
 <h2><center> Fundamentos de Programação </center></h2>  
 
-<center><p><img src="https://i.pinimg.com/564x/bc/26/4c/bc264ca6d03e336926220dbfef353ac6.jpg" width="600"  /></p></center>
+<center><p><img src="https://i.ibb.co/hfgMVZk/Screenshot-2021-07-13-at-23-01-47.png" width="600"  /></p></center>
 
 
 <h4><center> Projecto de Recurso: Sheep & Wolf </center></h4>  
@@ -77,6 +77,8 @@ Este projecto consiste na construção de um tabuleiro de jogo 2D divido em 8x8 
 
 De um lado do tabuleiro, um jogador controla os **Lobos** e no lado oposto do tabuleiro, outro jogador controla as **Ovelhas**.
 
+<center><p><img src="https://i.ibb.co/Sy6XPW1/unknown-1.png" width="500"  /></p></center>
+
 
 </p>
 
@@ -124,80 +126,53 @@ Para a criação do Menu Incial foi criado um ficheiro ***py: Menu***.
 * Definidas as teclas do Teclado para navegação do Menu
 
 
-
  </p>
 
  <p>
 
-<h3>4. Tabuleiro (FALTA) <a name="tabuleiro"></a></h3>
+<h3>4. Tabuleiro <a name="tabuleiro"></a></h3>
 
 
 Para a criação do tabuleiro foi criado um ficheiro ***py: Main***. 
 
-(FALTA)
+O tamanho do tabuleiro de jogo é de 650x650 pixeis e definido pela variável **WIDTH** e está posicionado acima e centrado do Menu.
 
+É neste ficheiro que são também definidas as cores em código RBG utilizadas no tabuleiro.
 
-O tipo de mapa criado é um **text_map** em 2D para a contrução do mesmo foi utilizada a letra **I**.
+As peças são colocadas no tabuleiro através da *função create_board* onde as peças do Wolf são colocadas no topo do tabuleiro e as peças da Sheep colocadas no fundo do tabuleiro.
 
-Para criar o mapa em si, são detectadas as letras **I** através de uma *função if* que transforma a letra numa parede.
-
-Sendo assim, foram criados os limites do mapa, colocando **I** nos cantos superior, inferior e lateral no **text_map**, e colocadas paredes dentro do mapa, intercalando com "." que representa espaço vazio.
-
-Para transformar este mapa 2D numa vista 3D, é utilizada a fórmula que se encontra no ficheiro ***py: AppSettings***:
-
-Multiplicamos ainda distancia por 3, para optimizar a escala
-Isso faz com que o escala do cenário seja "aumentada"
-
-`proj_3d = 3 * dist * walls`
-
-Sendo que a multiplicação por da distância por 3 serve para projectar e optimizar a escala tornando assim a vista e a navegação pelo mapa de forma mais agradável para o jogador devido à escala mais realista. 
-
+ 
 </p>
 
 <p>
 
-<h3>5. Movimentos do Jogador (FALTA) <a name="movimentos"></a></h3>
+<h3>5. Movimentos do Jogador <a name="movimentos"></a></h3>
 
-Para definir as configurações do jogo, foi criado um ficheiro ***py: AppSettings***.
 
-É neste ficheiro que são definidas as configurações tais como:
+Para que existam dois jogadores, foi criada a *class Piece* onde é definido o Jogador Wolf (**wlf**) e a respectiva imagem que representa o jogador e o Jogador Sheep (**shp**) e a imagem que o representa.
 
-**Configurações de ecrã**
-* Largura e Altura da tela de jogo
-* FPS (Valor Limite de Frames por Second)
+Tendo em conta que o Jogador Wolf tem movimentos mais limitados que o Jogador Sheep, as coordenadas do mesmo são determinadas para que este apenas consiga movimentar-se para baixo na diagonal enquanto a sheep pode movimentar-se livremente na diagonal no tabuleiro.
 
-**Configurações Ray Casting**
-* Ponto de Vista
-* Número de raios
-* Dimensão
-* Distância
-* Projecção 3D
-* Ângulo
-* Escala
-
-**Configurações de cores do jogo**
-* Lista de cores em código RGB usadas no jogo
 
 </p>
 
 
-<h3>6.Contribuições individuais (FALTA)<a name="contribuiçoes"></a></h3>
+<h3>6.Contribuições individuais <a name="contribuiçoes"></a></h3>
 
 **Rafaela Henriques**
-* Organização e correções de código
+* Organização e Correções de código
 * Criação do ficheiro ***Menu***
 * Criação do ficheiro ***Main***
+* Criação do Tabuleiro
+* Criação do Menu
 
 **Sónia Raposo**
-* Organização e correções de código
 * Realização da Arte (Lobo, Ovelha e Fundo)
+* Sons da Wolf e Sheep
+* Colocação das Peças no Tabuleiro
+* Highlight dos movimentos
 * Realização do ficheiro ***readme***
-* Realização do ficheiro ***Postmortem***
 
 **Steven Hall**
-* Organização e correções de código
-* Configurações Base
-* Criação do ficheiro ***Ray***
-* Configurações dos Visuais do Jogo em 3D
-* Movimentos especiais do jogador (Sprint e Salto)
-* Configurações de Cores no Mapa
+* Organizacao e Comentários no código
+* Realização do ficheiro ***Postmortem***
