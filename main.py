@@ -140,9 +140,13 @@ def select_moves(piece, index, moves):
     if check_team(moves, index):
         if piece.type == 'lf':
             if piece.team == 'w':
+                pygame.mixer.music.load('sounds/wolf.mp3')
+                pygame.mixer.music.play(0)
                 return highlight(wolf_moves(index))
 
         if piece.type == 'hp':
+            pygame.mixer.music.load('sounds/sheep.mp3')
+            pygame.mixer.music.play(0)
             return highlight(sheep_moves(index))
 
 
@@ -174,6 +178,14 @@ def sheep_moves(index):
 
     return board
 
+
+def win(board):
+    for row in range(len(board)):
+        for column in range(len(board[0])):
+            if row == - 1 or row == 0:
+                print("sheep won")
+
+    return win
 
 class Node:
     def __init__(self, row, col, width):
