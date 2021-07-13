@@ -185,18 +185,14 @@ Para definir as configurações do jogo, foi criado um ficheiro ***py: AppSettin
 
 **Rafaela Henriques**
 * Organização e correções de código
-* Criação do ficheiro ***Map***
-* Criação do ficheiro ***AppSettings***
-* Configurações de mapa
-* Realização do ficheiro ***Postmortem***
+* Criação do ficheiro ***Menu***
+* Criação do ficheiro ***Main***
 
 **Sónia Raposo**
 * Organização e correções de código
-* Criação do ficheiro ***PlayScript***
-* Criação do ficheiro ***Main***
-* Configurações ecrã
-* Movimentos básicos do jogador
+* Realização da Arte (Lobo, Ovelha e Fundo)
 * Realização do ficheiro ***readme***
+* Realização do ficheiro ***Postmortem***
 
 **Steven Hall**
 * Organização e correções de código
